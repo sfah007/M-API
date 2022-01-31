@@ -250,6 +250,26 @@ def fake_address(request: Request):
         requests.post(WEBHOOKURL, data=data)
         return {"error": "Something went wrong"}
 
+    
+@app.get("/api/pythonany")
+def fake_address(request: Request):
+    """
+    This returns python host.<br>
+    <pre>
+    :return: json<br>
+    </pre>
+    """
+    from src.pythonany import create_acc
+    try:
+        return create_acc()
+    except Exception as e:
+        # send to webhook
+        data = {
+            "content": f"***{e}***"
+        }
+        requests.post(WEBHOOKURL, data=data)
+        return {"error": "Something went wrong"}
+
 
 @app.get('/api/downloader/auto', tags=['downloading'])
 def downloader_auto(url: str):
