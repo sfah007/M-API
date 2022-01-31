@@ -38,4 +38,4 @@ def create_acc():
     'recaptcha_response_token_v3': '',
     }
     re = requests.post(url,headers=headers,data=data)
-    return {"Username": f'{username}',"Email": f'{email}',"Password": f'{password}',"Host": 'www.pythonanywhere.com'}
+    return {"Username": f'{username}',"Email": f'{email}gmail.com',"Password": f'{password}',"Host": 'www.pythonanywhere.com'}
