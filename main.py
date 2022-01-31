@@ -12,7 +12,7 @@ import os
 
 WEBHOOKURL = os.environ.get('WEBHOOKURL')
 description = """
-# This is MAJHCC's  (Mohammed Aljahawri)   API helps you to do some cool stuffs.
+# This is MAJHCC's  (Ali Saadoun)   API helps you to do some cool stuffs.
 <br>
 [-] This API is still under development.<br>
 [+] This API is working perfectly.<br>
@@ -23,14 +23,14 @@ description = """
 
 
 limiter = Limiter(key_func=get_remote_address)
-app = FastAPI(title="MAJHCC's API", description=description, version="0.5.3")
+app = FastAPI(title="ALI's API", description=description, version="0.5.3")
 app.state.limiter = limiter
 app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 
 @app.get("/", response_class=RedirectResponse)
 def read_root():
-    return RedirectResponse("https://majhcc.xyz")
+    return RedirectResponse("https://wgod.ga")
 
 
 @app.get("/api/yt", tags=['downloading'])
