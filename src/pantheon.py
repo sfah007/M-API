@@ -3,7 +3,7 @@ import random
 
 def create_acc():
   url = 'https://dashboard.pantheon.io/register'
-        head = {
+  head = {
             'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
             'Accept-Encoding': 'gzip, deflate, br',
             'Accept-Language': 'ar,en-US;q=0.9,en;q=0.8',
@@ -25,9 +25,9 @@ def create_acc():
             'Sec-Fetch-User': '?1',
             'Upgrade-Insecure-Requests': '1',
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36',             
-        }
-        rand = str(''.join(random.choice("zxcvbnmasdfghjklqwertyuiop1234567890")for i in range(10)))
-        data = {
+         }
+  rand = str(''.join(random.choice("zxcvbnmasdfghjklqwertyuiop1234567890")for i in range(10)))
+  data = {
             'pda_campaign':'{}',
             'firstname': 'ali',
             'lastname': 'alhamzawi',
@@ -39,9 +39,9 @@ def create_acc():
             'edu': 'edu',
             'tos': 'tos',
             '_csrf': 'bl25T4Su-VrvpiI0Pjme3ObuIig4Q08ZrdNs',
-                }
-        R = requests.post(url,headers=head,data=data)
-        if 'Please Login - Pantheon Dashboard' in R.text :
-          return {'email': f'{rand}@emailnax.com','password': 'FN#kC_A_god99','login_yourl': 'https://dashboard.pantheon.io/','code by': '@A_god'}
-        else:
-          return {'state': 'false','code by': '@A_god'}
+         }
+  R = requests.post(url,headers=head,data=data)
+  if 'Please Login - Pantheon Dashboard' in R.text :
+    return {'email': f'{rand}@emailnax.com','password': 'FN#kC_A_god99','login_yourl': 'https://dashboard.pantheon.io/','code by': '@A_god'}
+  else:
+    return {'state': 'false','code by': '@A_god'}
