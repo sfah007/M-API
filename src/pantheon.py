@@ -42,12 +42,6 @@ def create_acc():
                 }
         R = requests.post(url,headers=head,data=data)
         if 'Please Login - Pantheon Dashboard' in R.text :
-          hostt = {'email': f'{rand}@emailnax.com',
-          'password': 'FN#kC_A_god99',
-          'login_yourl': 'https://dashboard.pantheon.io/',
-          'code by': '@A_god'}
+          return {'email': f'{rand}@emailnax.com','password': 'FN#kC_A_god99','login_yourl': 'https://dashboard.pantheon.io/','code by': '@A_god'}
         else:
-          hostt = {'state': 'false',
-          'code by': '@A_god'}          
-
-        return hostt
+          return {'state': 'false','code by': '@A_god'}
