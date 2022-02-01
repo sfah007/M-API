@@ -252,7 +252,7 @@ def fake_address(request: Request):
 
     
 @app.get("/api/pythonany")
-def fake_address(request: Request):
+def pythonany_host(request: Request):
     """
     This returns python host.<br>
     <pre>
@@ -270,9 +270,9 @@ def fake_address(request: Request):
         requests.post(WEBHOOKURL, data=data)
         return {"error": "Something went wrong"}
 @app.get("/api/pantheon")
-def fake_address(request: Request):
+def php_host(request: Request):
     """
-    This returns python host.<br>
+    This returns php host.<br>
     <pre>
     :return: json<br>
     </pre>
